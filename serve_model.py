@@ -7,6 +7,9 @@ from typing import Optional
 from collections import deque
 from datetime import datetime
 
+import warnings
+warnings.filterwarnings('ignore', message='X does not have valid feature names')
+
 # --- Load artifacts ---
 binary_pipe   = joblib.load('output/binary_pipe.pkl')
 multi_pipe    = joblib.load('output/multi_pipe.pkl')
